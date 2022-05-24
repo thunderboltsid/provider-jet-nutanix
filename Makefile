@@ -2,15 +2,15 @@
 # Setup Project
 
 PROJECT_NAME := provider-jet-nutanix
-PROJECT_REPO := github.com/crossplane-contrib/$(PROJECT_NAME)
+PROJECT_REPO := github.com/thunderboltsid/$(PROJECT_NAME)
 
 export TERRAFORM_VERSION := 1.1.6
 
-export TERRAFORM_PROVIDER_SOURCE := hashicorp/null
-export TERRAFORM_PROVIDER_VERSION := 3.1.0
-export TERRAFORM_PROVIDER_DOWNLOAD_NAME := terraform-provider-null
-export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX := https://releases.hashicorp.com/terraform-provider-null/3.1.0
-export TERRAFORM_NATIVE_PROVIDER_BINARY := terraform-provider-null_v3.1.0_x5
+export TERRAFORM_PROVIDER_SOURCE := nutanix/nutanix
+export TERRAFORM_PROVIDER_VERSION := 1.5.0
+export TERRAFORM_PROVIDER_DOWNLOAD_NAME := terraform-provider-nutanix
+export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX := https://releases.hashicorp.com/terraform-provider-nutanix/1.5.0
+export TERRAFORM_NATIVE_PROVIDER_BINARY := terraform-provider-nutanix.1.5.0
 
 PLATFORMS ?= linux_amd64 linux_arm64
 
