@@ -21,7 +21,8 @@ import (
 
 	"github.com/crossplane/terrajet/pkg/controller"
 
-	resource "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/null/resource"
+	key "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/category_key/key"
+	value "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/category_value/value"
 	providerconfig "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/providerconfig"
 )
 
@@ -29,7 +30,8 @@ import (
 // the supplied manager.
 func Setup(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
-		resource.Setup,
+		key.Setup,
+		value.Setup,
 		providerconfig.Setup,
 	} {
 		if err := setup(mgr, o); err != nil {

@@ -22,7 +22,8 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/thunderboltsid/provider-jet-nutanix/apis/null/v1alpha1"
+	v1alpha1 "github.com/thunderboltsid/provider-jet-nutanix/apis/category_key/v1alpha1"
+	v1alpha1category_value "github.com/thunderboltsid/provider-jet-nutanix/apis/category_value/v1alpha1"
 	v1alpha1apis "github.com/thunderboltsid/provider-jet-nutanix/apis/v1alpha1"
 )
 
@@ -30,6 +31,7 @@ func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1category_value.SchemeBuilder.AddToScheme,
 		v1alpha1apis.SchemeBuilder.AddToScheme,
 	)
 }
