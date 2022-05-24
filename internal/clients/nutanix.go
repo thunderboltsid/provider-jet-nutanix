@@ -19,7 +19,7 @@ package clients
 import (
 	"context"
 	"encoding/json"
-
+	"fmt"
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 	"github.com/pkg/errors"
 	"k8s.io/apimachinery/pkg/types"
@@ -78,15 +78,15 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 		// Deprecated: In shared gRPC mode we do not support injecting
 		// credentials via the environment variables. You should specify
 		// credentials via the Terraform main.tf.json instead.
-		/*ps.Env = []string{
-			fmt.Sprintf("%s=%s", "HASHICUPS_USERNAME", nutanixCreds["username"]),
-			fmt.Sprintf("%s=%s", "HASHICUPS_PASSWORD", nutanixCreds["password"]),
-		}*/
+		ps.Env = []string{
+			fmt.Sprintf("%s=%s", "NUTANIX_USERNAME", nutanixCreds["username"]),
+			fmt.Sprintf("%s=%s", "NUTANIX_PASSWORD", nutanixCreds["password"]),
+		}
 		// set credentials in Terraform provider configuration
-		/*ps.Configuration = map[string]interface{}{
+		ps.Configuration = map[string]interface{}{
 			"username": nutanixCreds["username"],
 			"password": nutanixCreds["password"],
-		}*/
+		}
 		return ps, nil
 	}
 }

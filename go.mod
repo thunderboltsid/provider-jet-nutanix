@@ -8,6 +8,7 @@ require (
 	github.com/crossplane/terrajet v0.4.0-rc.0.0.20220510203225-5e7094f2ea5c
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.0
 	github.com/pkg/errors v0.9.1
+	github.com/terraform-providers/terraform-provider-nutanix v1.1.0
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 	k8s.io/apimachinery v0.23.0
 	k8s.io/client-go v0.23.0
@@ -126,3 +127,5 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.0 // indirect
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
+
+replace github.com/terraform-providers/terraform-provider-nutanix => github.com/nutanix/terraform-provider-nutanix v1.5.0
