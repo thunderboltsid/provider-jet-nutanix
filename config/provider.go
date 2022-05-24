@@ -26,6 +26,7 @@ import (
 	"github.com/thunderboltsid/provider-jet-nutanix/config/null"
 	"github.com/thunderboltsid/provider-jet-nutanix/config/nutanix_category_key"
 	"github.com/thunderboltsid/provider-jet-nutanix/config/nutanix_category_value"
+	"github.com/thunderboltsid/provider-jet-nutanix/config/nutanix_image"
 )
 
 const (
@@ -50,6 +51,7 @@ func GetProvider() *tjconfig.Provider {
 		tjconfig.WithIncludeList([]string{
 			"nutanix_category_key$",
 			"nutanix_category_value$",
+			"nutanix_image$",
 		}))
 
 	for _, configure := range []func(provider *tjconfig.Provider){
@@ -57,6 +59,7 @@ func GetProvider() *tjconfig.Provider {
 		null.Configure,
 		nutanix_category_key.Configure,
 		nutanix_category_value.Configure,
+		nutanix_image.Configure,
 	} {
 		configure(pc)
 	}

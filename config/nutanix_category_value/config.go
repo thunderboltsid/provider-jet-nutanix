@@ -21,6 +21,4 @@ func Configure(p *config.Provider) {
 			Type: "github.com/thunderboltsid/provider-jet-nutanix/apis/category_key/v1alpha1.CategoryKey",
 		}
 	})
-
-
 }

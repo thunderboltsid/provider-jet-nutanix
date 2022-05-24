@@ -23,6 +23,7 @@ import (
 
 	key "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/category_key/key"
 	value "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/category_value/value"
+	image "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/image/image"
 	providerconfig "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/providerconfig"
 )
 
@@ -32,6 +33,7 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
 		key.Setup,
 		value.Setup,
+		image.Setup,
 		providerconfig.Setup,
 	} {
 		if err := setup(mgr, o); err != nil {
