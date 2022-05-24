@@ -1,4 +1,4 @@
-module github.com/crossplane-contrib/provider-jet-nutanix
+module github.com/thunderboltsid/provider-jet-nutanix
 
 go 1.17
 

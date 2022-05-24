@@ -8,7 +8,7 @@ Nutanix API.
 ## Getting Started
 
 Install the provider by using the following command after changing the image tag
-to the [latest release](https://github.com/crossplane-contrib/provider-jet-nutanix/releases):
+to the [latest release](https://github.com/thunderboltsid/provider-jet-nutanix/releases):
 ```
 kubectl crossplane install provider crossplane/provider-jet-nutanix:v0.1.0
 ```
@@ -20,7 +20,7 @@ kubectl apply -f examples/install.yaml
 
 Notice that in this example Provider resource is referencing ControllerConfig with debug enabled.
 
-You can see the API reference [here](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-nutanix).
+You can see the API reference [here](https://doc.crds.dev/github.com/thunderboltsid/provider-jet-nutanix).
 
 ## Developing
 
@@ -50,7 +50,7 @@ make build
 ## Report a Bug
 
 For filing bugs, suggesting improvements, or requesting new features, please
-open an [issue](https://github.com/crossplane-contrib/provider-jet-nutanix/issues).
+open an [issue](https://github.com/thunderboltsid/provider-jet-nutanix/issues).
 
 ## Contact
 

@@ -23,12 +23,12 @@ import (
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
-	"github.com/crossplane-contrib/provider-jet-nutanix/config/null"
+	"github.com/thunderboltsid/provider-jet-nutanix/config/null"
 )
 
 const (
 	resourcePrefix = "nutanix"
-	modulePath     = "github.com/crossplane-contrib/provider-jet-nutanix"
+	modulePath     = "github.com/thunderboltsid/provider-jet-nutanix"
 )
 
 //go:embed schema.json

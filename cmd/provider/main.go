@@ -36,12 +36,12 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	"github.com/crossplane-contrib/provider-jet-nutanix/apis"
-	"github.com/crossplane-contrib/provider-jet-nutanix/apis/v1alpha1"
-	"github.com/crossplane-contrib/provider-jet-nutanix/config"
-	"github.com/crossplane-contrib/provider-jet-nutanix/internal/clients"
-	"github.com/crossplane-contrib/provider-jet-nutanix/internal/controller"
-	"github.com/crossplane-contrib/provider-jet-nutanix/internal/features"
+	"github.com/thunderboltsid/provider-jet-nutanix/apis"
+	"github.com/thunderboltsid/provider-jet-nutanix/apis/v1alpha1"
+	"github.com/thunderboltsid/provider-jet-nutanix/config"
+	"github.com/thunderboltsid/provider-jet-nutanix/internal/clients"
+	"github.com/thunderboltsid/provider-jet-nutanix/internal/controller"
+	"github.com/thunderboltsid/provider-jet-nutanix/internal/features"
 )
 
 func main() {

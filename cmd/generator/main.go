@@ -25,7 +25,7 @@ import (
 
 	"github.com/crossplane/terrajet/pkg/pipeline"
 
-	"github.com/crossplane-contrib/provider-jet-nutanix/config"
+	"github.com/thunderboltsid/provider-jet-nutanix/config"
 )
 
 func main() {

@@ -21,8 +21,8 @@ import (
 
 	"github.com/crossplane/terrajet/pkg/controller"
 
-	resource "github.com/crossplane-contrib/provider-jet-nutanix/internal/controller/null/resource"
-	providerconfig "github.com/crossplane-contrib/provider-jet-nutanix/internal/controller/providerconfig"
+	resource "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/null/resource"
+	providerconfig "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/providerconfig"
 )
 
 // Setup creates all controllers with the supplied logger and adds them to
