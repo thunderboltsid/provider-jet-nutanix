@@ -26,6 +26,7 @@ import (
 	v1alpha1category_value "github.com/thunderboltsid/provider-jet-nutanix/apis/category_value/v1alpha1"
 	v1alpha1image "github.com/thunderboltsid/provider-jet-nutanix/apis/image/v1alpha1"
 	v1alpha1apis "github.com/thunderboltsid/provider-jet-nutanix/apis/v1alpha1"
+	v1alpha1virtual_machine "github.com/thunderboltsid/provider-jet-nutanix/apis/virtual_machine/v1alpha1"
 )
 
 func init() {
@@ -35,6 +36,7 @@ func init() {
 		v1alpha1category_value.SchemeBuilder.AddToScheme,
 		v1alpha1image.SchemeBuilder.AddToScheme,
 		v1alpha1apis.SchemeBuilder.AddToScheme,
+		v1alpha1virtual_machine.SchemeBuilder.AddToScheme,
 	)
 }
 

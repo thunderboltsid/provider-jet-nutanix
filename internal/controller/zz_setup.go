@@ -25,6 +25,7 @@ import (
 	value "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/category_value/value"
 	image "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/image/image"
 	providerconfig "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/providerconfig"
+	machine "github.com/thunderboltsid/provider-jet-nutanix/internal/controller/virtual_machine/machine"
 )
 
 // Setup creates all controllers with the supplied logger and adds them to
@@ -35,6 +36,7 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		value.Setup,
 		image.Setup,
 		providerconfig.Setup,
+		machine.Setup,
 	} {
 		if err := setup(mgr, o); err != nil {
 			return err

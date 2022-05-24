@@ -19,6 +19,7 @@ package config
 import (
 	// Note(turkenh): we are importing this to embed provider schema document
 	_ "embed"
+	"github.com/thunderboltsid/provider-jet-nutanix/config/nutanix_virtual_machine"
 
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
@@ -52,6 +53,7 @@ func GetProvider() *tjconfig.Provider {
 			"nutanix_category_key$",
 			"nutanix_category_value$",
 			"nutanix_image$",
+			"nutanix_virtual_machine$",
 		}))
 
 	for _, configure := range []func(provider *tjconfig.Provider){
@@ -60,6 +62,7 @@ func GetProvider() *tjconfig.Provider {
 		nutanix_category_key.Configure,
 		nutanix_category_value.Configure,
 		nutanix_image.Configure,
+		nutanix_virtual_machine.Configure,
 	} {
 		configure(pc)
 	}
