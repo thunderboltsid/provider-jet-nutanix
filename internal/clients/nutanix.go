@@ -81,11 +81,15 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 		ps.Env = []string{
 			fmt.Sprintf("%s=%s", "NUTANIX_USERNAME", nutanixCreds["username"]),
 			fmt.Sprintf("%s=%s", "NUTANIX_PASSWORD", nutanixCreds["password"]),
+			fmt.Sprintf("%s=%s", "NUTANIX_PORT", nutanixCreds["port"]),
+			fmt.Sprintf("%s=%s", "NUTANIX_ENDPOINT", nutanixCreds["endpoint"]),
 		}
 		// set credentials in Terraform provider configuration
 		ps.Configuration = map[string]interface{}{
 			"username": nutanixCreds["username"],
 			"password": nutanixCreds["password"],
+			"port":     nutanixCreds["port"],
+			"endpoint": nutanixCreds["endpoint"],
 		}
 		return ps, nil
 	}
