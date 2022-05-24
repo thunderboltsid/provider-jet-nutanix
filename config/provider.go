@@ -24,6 +24,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
 	"github.com/thunderboltsid/provider-jet-nutanix/config/null"
+	"github.com/thunderboltsid/provider-jet-nutanix/config/nutanix_category_key"
+	"github.com/thunderboltsid/provider-jet-nutanix/config/nutanix_category_value"
 )
 
 const (
@@ -44,11 +46,17 @@ func GetProvider() *tjconfig.Provider {
 	}
 
 	pc := tjconfig.NewProviderWithSchema([]byte(providerSchema), resourcePrefix, modulePath,
-		tjconfig.WithDefaultResourceFn(defaultResourceFn))
+		tjconfig.WithDefaultResourceFn(defaultResourceFn),
+		tjconfig.WithIncludeList([]string{
+			"nutanix_category_key$",
+			"nutanix_category_value$",
+		}))
 
 	for _, configure := range []func(provider *tjconfig.Provider){
 		// add custom config functions
 		null.Configure,
+		nutanix_category_key.Configure,
+		nutanix_category_value.Configure,
 	} {
 		configure(pc)
 	}
