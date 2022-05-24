@@ -10,7 +10,7 @@ export TERRAFORM_PROVIDER_SOURCE := nutanix/nutanix
 export TERRAFORM_PROVIDER_VERSION := 1.5.0
 export TERRAFORM_PROVIDER_DOWNLOAD_NAME := terraform-provider-nutanix
 export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX := https://releases.hashicorp.com/terraform-provider-nutanix/1.5.0
-export TERRAFORM_NATIVE_PROVIDER_BINARY := terraform-provider-nutanix.1.5.0
+export TERRAFORM_NATIVE_PROVIDER_BINARY := terraform-provider-nutanix_v1.5.0
 
 PLATFORMS ?= linux_amd64 linux_arm64
 
